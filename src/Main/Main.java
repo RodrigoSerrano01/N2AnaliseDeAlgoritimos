@@ -1,30 +1,26 @@
 package Main;
 
-import ArquivoService.GerenciaArquivo;
 import ImpressaoService.ImprimeTempo;
-import NumeroService.NumerosRandomizados;
+import NumeroService.GeradorDeNumeros;
 import TempoService.*;
 
 import java.util.List;
 
 import static ENUM.variaveisConstantes.*;
-import static NumeroService.NumerosRandomizados.numerosRandomizados;
 
 public class Main {
     public static void main(String[] args) {
 
 
-
-
-        NumerosRandomizados numeroAleatorio = new NumerosRandomizados();
+        GeradorDeNumeros numeroAleatorio = new GeradorDeNumeros();
         numeroAleatorio.numerosRandomizados(TAMANHO.getValor(), PRIMEIRO.getValor(), ULTIMO.getValor());
         Integer[] lista = numeroAleatorio.getArrayNumeros();
 
-//        NumerosRandomizados numeroCrescente = new NumerosRandomizados();
+//        GeradorDeNumeros numeroCrescente = new GeradorDeNumeros();
 //        numeroCrescente.numerosCrescentes(TAMANHO.getValor(), PRIMEIRO.getValor());
 //        Integer[] lista = numeroCrescente.getArrayNumeros();
 
-//        NumerosRandomizados numeroDec = new NumerosRandomizados();
+//        GeradorDeNumeros numeroDec = new GeradorDeNumeros();
 //        numeroDec.numerosDec(TAMANHO.getValor(), PRIMEIRO.getValor());
 //        Integer[] lista = numeroDec.getArrayNumeros();
 
