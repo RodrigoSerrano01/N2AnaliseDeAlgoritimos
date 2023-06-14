@@ -12,6 +12,7 @@ public class TempoSelectionSort implements TempoOrdem{
         double timeEnding = System.currentTimeMillis();
         this.tempo = (timeEnding-timeBeginning )/1000;
         System.out.println(toString());
+
         return tempo;
     }
     @Override

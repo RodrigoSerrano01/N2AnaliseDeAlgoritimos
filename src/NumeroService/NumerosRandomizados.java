@@ -1,12 +1,13 @@
 package NumeroService;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
 public class NumerosRandomizados {
 
-        private List<Integer> set;
+        private static List<Integer> set;
 
 
         public Integer[] getArrayNumeros() {
@@ -14,8 +15,26 @@ public class NumerosRandomizados {
         }
 
 
-        public NumerosRandomizados(Integer tamanho, Integer primeiro, Integer ultimo) {
-            this.set = new Random().ints(primeiro, ultimo).distinct().limit(tamanho).boxed().collect(Collectors.toList());
+        public static List<Integer> numerosRandomizados(Integer tamanho, Integer primeiro, Integer ultimo) {
+           set = new Random().ints(primeiro, ultimo).distinct().limit(tamanho).boxed().collect(Collectors.toList());
+           return set;
         }
+
+        public static List<Integer> numerosCrescentes(Integer tamanho, Integer primeiro) {
+           set =  new ArrayList<>();
+            for (int i =primeiro; i< tamanho; i ++){
+                set.add(i);
+            }
+            return set;
+        }
+
+    public static List<Integer> numerosDec(Integer tamanho, Integer primeiro) {
+        set =  new ArrayList<>();
+        for (int i =tamanho; i>= primeiro; i --){
+            set.add(i);
+        }
+        return set;
+    }
+
 
     }

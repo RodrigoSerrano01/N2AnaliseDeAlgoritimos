@@ -4,7 +4,7 @@ public enum variaveisConstantes {
 
 
 
-        TAMANHO(10000), PRIMEIRO(1), ULTIMO(20000);
+        TAMANHO(100), PRIMEIRO(1), ULTIMO(200);
 
 
         private final int valor;
